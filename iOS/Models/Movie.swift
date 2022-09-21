@@ -27,6 +27,7 @@ import SwiftUI
 struct Movie: Identifiable, Hashable {
     var id: String
     var name: String
+    var categories: [String]
     var thumbnailURL: URL
     
 //    var categories: [String]
