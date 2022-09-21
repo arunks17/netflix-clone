@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  netflix-clone
+//  Shared
 //
 //  Created by Arun KS on 21/09/22.
 //
