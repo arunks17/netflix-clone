@@ -27,6 +27,7 @@ struct MovieDetailView: View {
                     Spacer()
                     
                     Button(action: {
+                        movieDetailToShow = nil
                     }, label: {
                         Image(systemName: "xmark.circle")
                             .font(.system(size: 28))
