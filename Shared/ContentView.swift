@@ -115,15 +115,16 @@ struct ContentView: View {
             }
             .accentColor(.white)
             
-//            PreviewList(
-//                movies: exampleMovies,
-//                currentSelection: $previewStartingIndex,
-//                isVisible: $showPreviewFullScreen,
-//                externalDragGesture: previewDragGesture)
-//                .offset(y: previewCurrentPos)
-//                .isHidden(!showPreviewFullScreen)
-//                .animation(.easeIn)
-//                .transition(.move(edge: .bottom))
+            PreviewList(
+                movies: exampleMovies,
+                currentSelection: $previewStartingIndex,
+                isVisible: $showPreviewFullScreen,
+                externalDragGesture: previewDragGesture)
+                .offset(y: previewCurrentPos)
+                .isHidden(!showPreviewFullScreen)
+                .animation(.easeIn)
+                .transition(.move(edge: .bottom))
+            
         }
         .onChange(of: showPreviewFullScreen, perform: { value in
             if value {

@@ -40,6 +40,7 @@ class HomeVM: ObservableObject {
         movies["Trending Now"] = exampleMovies
         movies["Stand-up Comedy"] = exampleMovies.shuffled()
         movies["New Releases"] = exampleMovies.shuffled()
+        movies["Watch It Again"] = exampleMovies.shuffled()
         movies["Trillers"] = exampleMovies.shuffled()
         
     }
