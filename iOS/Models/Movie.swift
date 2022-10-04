@@ -27,23 +27,22 @@ import SwiftUI
 struct Movie: Identifiable, Hashable {
     var id: String
     var name: String
-    var categories: [String]
     var thumbnailURL: URL
+    var categories: [String]
     
-//    var categories: [String]
-//    var genre: HomeGenre = .AllGenres
-//
+    var genre: HomeGenre = .AllGenres
+
     // MovieDetail View
     var year: Int
     var rating: String
     var numberOfSeasons: Int?
-//
+
 //    // Personalization
     var currentEpisode: CurrentEpisodeInfo?
-//
-//    var accentColor: Color = .white
-//
-//
+
+    var accentColor: Color = .white
+
+
     var defaultEpisodeInfo: CurrentEpisodeInfo
     var creators: String
     var cast: String
@@ -51,18 +50,18 @@ struct Movie: Identifiable, Hashable {
     var moreLikeThisMovies: [Movie]
 
     var episodes: [Episode]?
-//
-//    var movieType: MovieType {
-//        return episodes == nil ? .movie : .tvShow
-//    }
-//
+
+    var movieType: MovieType {
+        return episodes == nil ? .movie : .tvShow
+    }
+
     var promotionHeadline: String?
-//
+
     var trailers: [Trailer]
-//
-//    var previewImageName: String
-//    var previewVideoURL: URL?
-//
+
+    var previewImageName: String
+    var previewVideoURL: URL?
+
     var numberOfSeasonsDisplay: String {
         if let num = numberOfSeasons {
             if num == 1 {
@@ -74,7 +73,7 @@ struct Movie: Identifiable, Hashable {
 
         return ""
     }
-//
+
     var episodeInfoDisplay: String {
         if let current = currentEpisode {
             return "S\(current.season):E\(current.episode) \(current.episodeName)"
@@ -82,7 +81,7 @@ struct Movie: Identifiable, Hashable {
             return "S\(defaultEpisodeInfo.season):E\(defaultEpisodeInfo.episode) \(defaultEpisodeInfo.episodeName)"
         }
     }
-//
+
     var episodeDescriptionDisplay: String {
         if let current = currentEpisode {
             return current.description
@@ -99,8 +98,8 @@ struct CurrentEpisodeInfo: Hashable, Equatable {
     var season: Int
     var episode: Int
 }
-//
-//enum MovieType {
-//    case movie
-//    case tvShow
-//}
+
+enum MovieType {
+    case movie
+    case tvShow
+}

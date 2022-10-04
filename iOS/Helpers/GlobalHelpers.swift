@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 
 let exampleVideoURL = URL(string: "https://www.radiantmediaplayer.com/media/big-buck-bunny-360p.mp4")!
@@ -79,101 +80,223 @@ var allExampleEpisodes = [episode1, episode2, episode3, episode4, episode5, epis
 
 let exampleEpisodeInfo1 = CurrentEpisodeInfo(episodeName: "Beginnings and Endings", description: "Six months after the disappearances, the police form a task force. In 2052, Jonas learns that most of Winden perished in an apocalyptic event.", season: 2, episode: 1)
 
+//let exampleMovie1 = Movie(
+//    id: UUID().uuidString,
+//    name: "DARK",
+//    categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
+//    thumbnailURL: URL(string: "https://picsum.photos/200/300")!,
+//    year: 2000,
+//    rating: "TV-MA",
+//    numberOfSeasons: 1,
+//    defaultEpisodeInfo: exampleEpisodeInfo1,
+//    creators: "Baran bo Odan, Jantje Friese",
+//    cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+//    moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6],
+//    episodes: allExampleEpisodes,
+//    promotionHeadline: "Best Rated Show",
+//    trailers: exampleTrailers)
+//
+//let exampleMovie2 = Movie(
+//   id: UUID().uuidString,
+//   name: "Travellers",
+//   categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV", "Triller"],
+//   thumbnailURL: URL(string: "https://picsum.photos/200/301")!,
+//   year: 2000,
+//   rating: "TV-MA",
+//   numberOfSeasons: 2,
+//   defaultEpisodeInfo: exampleEpisodeInfo1,
+//   creators: "Baran bo Odan, Jantje Friese",
+//   cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+//   moreLikeThisMovies: [],
+//   episodes: allExampleEpisodes,
+//   trailers: exampleTrailers)
+//
+//let exampleMovie3 = Movie(
+//   id: UUID().uuidString,
+//   name: "Community",
+//   categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
+//   thumbnailURL: URL(string: "https://picsum.photos/200/302")!,
+//   year: 2000,
+//   rating: "TV-MA",
+//   numberOfSeasons: 3,
+//   defaultEpisodeInfo: exampleEpisodeInfo1,
+//   creators: "Baran bo Odan, Jantje Friese",
+//   cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+//   moreLikeThisMovies: [exampleMovie2, exampleMovie4, exampleMovie5, exampleMovie6],
+//   episodes: allExampleEpisodes,
+//   promotionHeadline: "Best Rated Show",
+//   trailers: exampleTrailers)
+//
+//let exampleMovie4 = Movie(
+//   id: UUID().uuidString,
+//   name: "Alone",
+//   categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
+//   thumbnailURL: URL(string: "https://picsum.photos/200/303")!,
+//   year: 2000,
+//   rating: "TV-MA",
+//   numberOfSeasons: 4,
+//   defaultEpisodeInfo: exampleEpisodeInfo1,
+//   creators: "Baran bo Odan, Jantje Friese",
+//   cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+//   moreLikeThisMovies: [],
+//   episodes: allExampleEpisodes,
+//   trailers: exampleTrailers)
+//
+//let exampleMovie5 = Movie(
+//   id: UUID().uuidString,
+//   name: "Hannibal",
+//   categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
+//   thumbnailURL: URL(string: "https://picsum.photos/200/304")!,
+//   year: 2000,
+//   rating: "TV-MA",
+//   numberOfSeasons: 5,
+//   defaultEpisodeInfo: exampleEpisodeInfo1,
+//   creators: "Baran bo Odan, Jantje Friese",
+//   cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+//   moreLikeThisMovies: [],
+//   episodes: allExampleEpisodes,
+//   promotionHeadline: "Best Rated Show",
+//   trailers: exampleTrailers)
+//
+//let exampleMovie6 = Movie(
+//   id: UUID().uuidString,
+//   name: "After Life",
+//   categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
+//   thumbnailURL: URL(string: "https://picsum.photos/200/305")!,
+//   year: 2000,
+//   rating: "TV-MA",
+//   numberOfSeasons: 6,
+//   defaultEpisodeInfo: exampleEpisodeInfo1,
+//   creators: "Baran bo Odan, Jantje Friese",
+//   cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+//   moreLikeThisMovies: [],
+//   episodes: allExampleEpisodes,
+//   trailers: exampleTrailers)
+//
+//let exampleMovies = [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6]
+
+
+
 let exampleMovie1 = Movie(
     id: UUID().uuidString,
     name: "DARK",
-    categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
     thumbnailURL: URL(string: "https://picsum.photos/200/300")!,
-    year: 2000,
+    categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
+    year: 2020,
     rating: "TV-MA",
-    numberOfSeasons: 1,
+    numberOfSeasons: 2,
+    accentColor: Color.blue,
     defaultEpisodeInfo: exampleEpisodeInfo1,
     creators: "Baran bo Odan, Jantje Friese",
     cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
-    moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6],
+    moreLikeThisMovies: [exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6, exampleMovie7],
     episodes: allExampleEpisodes,
-    promotionHeadline: "Best Rated Show",
-    trailers: exampleTrailers)
+    trailers: exampleTrailers,
+    previewImageName: "darkPreview",
+    previewVideoURL: exampleVideoURL)
 
 let exampleMovie2 = Movie(
-   id: UUID().uuidString,
-   name: "Travellers",
-   categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV", "Triller"],
-   thumbnailURL: URL(string: "https://picsum.photos/200/301")!,
-   year: 2000,
-   rating: "TV-MA",
-   numberOfSeasons: 2,
-   defaultEpisodeInfo: exampleEpisodeInfo1,
-   creators: "Baran bo Odan, Jantje Friese",
-   cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
-   moreLikeThisMovies: [],
-   episodes: allExampleEpisodes,
-   trailers: exampleTrailers)
+    id: UUID().uuidString,
+    name: "Travelers",
+    thumbnailURL: URL(string: "https://picsum.photos/200/300/")!,
+    categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
+    year: 2020,
+    rating: "TV-MA",
+    numberOfSeasons: 2,
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "Baran bo Odan, Jantje Friese",
+    cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+    moreLikeThisMovies: [],
+    promotionHeadline: "Best Rated Show",
+    trailers: exampleTrailers,
+    previewImageName: "ozarkPreview",
+    previewVideoURL: exampleVideoURL)
 
 let exampleMovie3 = Movie(
-   id: UUID().uuidString,
-   name: "Community",
-   categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
-   thumbnailURL: URL(string: "https://picsum.photos/200/302")!,
-   year: 2000,
-   rating: "TV-MA",
-   numberOfSeasons: 3,
-   defaultEpisodeInfo: exampleEpisodeInfo1,
-   creators: "Baran bo Odan, Jantje Friese",
-   cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
-   moreLikeThisMovies: [exampleMovie2, exampleMovie4, exampleMovie5, exampleMovie6],
-   episodes: allExampleEpisodes,
-   promotionHeadline: "Best Rated Show",
-   trailers: exampleTrailers)
+    id: UUID().uuidString,
+    name: "Community",
+    thumbnailURL: URL(string: "https://picsum.photos/200/301")!,
+    categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
+    year: 2020,
+    rating: "TV-MA",
+    numberOfSeasons: 3,
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "Baran bo Odan, Jantje Friese",
+    cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+    moreLikeThisMovies: [],
+    trailers: exampleTrailers,
+    previewImageName: "dirtyJohnPreview",
+    previewVideoURL: exampleVideoURL)
 
 let exampleMovie4 = Movie(
-   id: UUID().uuidString,
-   name: "Alone",
-   categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
-   thumbnailURL: URL(string: "https://picsum.photos/200/303")!,
-   year: 2000,
-   rating: "TV-MA",
-   numberOfSeasons: 4,
-   defaultEpisodeInfo: exampleEpisodeInfo1,
-   creators: "Baran bo Odan, Jantje Friese",
-   cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
-   moreLikeThisMovies: [],
-   episodes: allExampleEpisodes,
-   trailers: exampleTrailers)
+    id: UUID().uuidString,
+    name: "Alone",
+    thumbnailURL: URL(string: "https://picsum.photos/200/302")!,
+    categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
+    year: 2020,
+    rating: "TV-MA",
+    numberOfSeasons: 4,
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "Baran bo Odan, Jantje Friese",
+    cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+    moreLikeThisMovies: [],
+    promotionHeadline: "New episodes coming soon",
+    trailers: exampleTrailers,
+    previewImageName: "travelersPreview",
+    previewVideoURL: exampleVideoURL)
 
 let exampleMovie5 = Movie(
-   id: UUID().uuidString,
-   name: "Hannibal",
-   categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
-   thumbnailURL: URL(string: "https://picsum.photos/200/304")!,
-   year: 2000,
-   rating: "TV-MA",
-   numberOfSeasons: 5,
-   defaultEpisodeInfo: exampleEpisodeInfo1,
-   creators: "Baran bo Odan, Jantje Friese",
-   cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
-   moreLikeThisMovies: [],
-   episodes: allExampleEpisodes,
-   promotionHeadline: "Best Rated Show",
-   trailers: exampleTrailers)
+    id: UUID().uuidString,
+    name: "Hannibal",
+    thumbnailURL: URL(string: "https://picsum.photos/200/303")!,
+    categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
+    year: 2020,
+    rating: "TV-MA",
+    numberOfSeasons: 5,
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "Baran bo Odan, Jantje Friese",
+    cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+    moreLikeThisMovies: [],
+    trailers: exampleTrailers,
+    previewImageName: "arrestedDevPreview",
+    previewVideoURL: exampleVideoURL)
 
 let exampleMovie6 = Movie(
-   id: UUID().uuidString,
-   name: "After Life",
-   categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
-   thumbnailURL: URL(string: "https://picsum.photos/200/305")!,
-   year: 2000,
-   rating: "TV-MA",
-   numberOfSeasons: 6,
-   defaultEpisodeInfo: exampleEpisodeInfo1,
-   creators: "Baran bo Odan, Jantje Friese",
-   cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
-   moreLikeThisMovies: [],
-   episodes: allExampleEpisodes,
-   trailers: exampleTrailers)
+    id: UUID().uuidString,
+    name: "After Life",
+    thumbnailURL: URL(string: "https://picsum.photos/200/304")!,
+    categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
+    year: 2020,
+    rating: "TV-MA",
+    numberOfSeasons: 6,
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "Baran bo Odan, Jantje Friese",
+    cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+    moreLikeThisMovies: [],
+    promotionHeadline: "Watch Season 6 Now",
+    trailers: exampleTrailers,
+    previewImageName: "whiteLinesPreview",
+    previewVideoURL: exampleVideoURL)
 
-let exampleMovies = [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6]
+let exampleMovie7 = Movie(
+    id: UUID().uuidString,
+    name: "After Life",
+    thumbnailURL: URL(string: "https://picsum.photos/200/305")!,
+    categories: ["Dystopian", "Exciting", "Suspenseful", "Sci-Fi TV"],
+    year: 2020,
+    rating: "TV-MA",
+    numberOfSeasons: 6,
+    defaultEpisodeInfo: exampleEpisodeInfo1,
+    creators: "Baran bo Odan, Jantje Friese",
+    cast: "Louis Hofmann, Oliver Masucci, jordis Triebel",
+    moreLikeThisMovies: [],
+    promotionHeadline: "Watch Season 6 Now",
+    trailers: exampleTrailers,
+    previewImageName: "ozarkPreview",
+    previewVideoURL: exampleVideoURL)
 
-
+var exampleMovies: [Movie] {
+    return [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6]
+}
 
 
